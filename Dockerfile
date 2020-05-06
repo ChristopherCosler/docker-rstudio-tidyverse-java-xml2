@@ -9,10 +9,6 @@ RUN apt-get -y update && apt-get install -y \
    libxml2-dev \
    libpq-dev 
 
-
-
-javac -version
-
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
