@@ -9,7 +9,7 @@ RUN apt-get -y update && apt-get install -y \
    libpq-dev 
 
 # Install further R packages
-RUN Rscript -e "install.packages(c('rJava', 'tidyverse', 'RJDBC', 'cronR'))" 
+RUN Rscript -e "install.packages(c('rJava', 'tidyverse', 'RJDBC'))" 
 
 # Initialize rocker/rstudio
 CMD ["/init"]
