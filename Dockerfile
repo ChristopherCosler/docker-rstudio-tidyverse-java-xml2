@@ -9,8 +9,8 @@ RUN apt-get -y update && apt-get install -y \
    libxml2-dev \
    libpq-dev 
 
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
-RUN export JAVA_HOME
+##ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
+##RUN export JAVA_HOME
 
 # Install further R packages
 RUN Rscript -e "install.packages(c('rJava'))" 
