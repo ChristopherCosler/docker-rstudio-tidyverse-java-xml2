@@ -3,7 +3,7 @@ FROM rocker/rstudio:3.6.2
 
 # Install java and rJava
 RUN apt-get -y update && apt-get install -y \
-   oracle-java8-installer \
+   openjdk-8-jdk \
    r-cran-rjava \
    libxml2-dev \
    libpq-dev 
