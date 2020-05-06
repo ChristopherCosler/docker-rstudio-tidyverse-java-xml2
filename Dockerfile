@@ -2,9 +2,11 @@
 FROM rocker/rstudio:3.6.2
 
 # Install java and rJava
+RUN sudo add-apt-repository ppa:webupd8team/java
+RUN sudo apt-get update
+RUN sudo apt-get install oracle-java8-installer
 
 RUN apt-get -y update && apt-get install -y \
-   openjdk-8-jdk \
    r-cran-rjava \
    libxml2-dev \
    libpq-dev 
