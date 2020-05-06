@@ -6,7 +6,8 @@ RUN apt-get -y update && apt-get install -y \
    default-jdk \
    r-cran-rjava \
    libxml2-dev \
-   libpq-dev
+   libpq-dev \
+   oracle-java8-installer
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
