@@ -10,8 +10,7 @@ RUN apt-get -y update && apt-get install -y \
    default-jdk \
    r-cran-rjava \
    libxml2-dev \
-   libpq-dev \
-   oracle-java8-installer
+   libpq-dev 
 
 
 
