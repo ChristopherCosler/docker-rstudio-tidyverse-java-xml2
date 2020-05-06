@@ -1,5 +1,5 @@
 # Base image from https://hub.docker.com/r/rocker/rstudio
-FROM rocker/rstudio:3.6.2
+FROM rocker/rstudio:latest
 
 # Install java and rJava
 RUN apt-get -y update && apt-get install -y \
@@ -9,7 +9,7 @@ RUN apt-get -y update && apt-get install -y \
    libpq-dev 
 
 # Install further R packages
-RUN Rscript -e "install.packages(c('rJava', 'tidyverse', 'RJDBC'))" 
+RUN Rscript -e "install.packages(c('rJava', 'tidyverse', 'RJDBC','dbplyr','xtable','sendmailR'), dependencies = TRUE)" 
 
 # Initialize rocker/rstudio
 CMD ["/init"]
