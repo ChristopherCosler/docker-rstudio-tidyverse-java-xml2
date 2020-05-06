@@ -7,9 +7,12 @@ RUN apt-get -y update && apt-get install -y \
    r-cran-rjava \	
    libxml2-dev \
    libpq-dev \
+   cron
 
 # Install further R packages
-RUN Rscript -e "install.packages(c('rJava', 'tidyverse', 'RJDBC'))" 
+RUN Rscript -e "install.packages(c('rJava', 'tidyverse', 'RJDBC', 'cronR'))" 
+
+RUN sudo service cron start
 
 # Initialize rocker/rstudio
 CMD ["/init"]
